@@ -1,0 +1,8 @@
+*
+!.gitignore
+!docs/*
+!/**/
+!*.py
+!*.data
+!report.pdf
+!README.md
