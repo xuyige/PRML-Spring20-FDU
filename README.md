@@ -38,10 +38,10 @@ For each assignment, the file should be structured like this
 .
 ├── assignment-1/
 │   ├── 16307130177/
-│   │   ├── report.pdf
-│   │   └── source.py
-│   └── handout/
-│       └── __init__.py
+│       ├── report.pdf
+│       └── source.py
+|       └── handout/
+|           └── __init__.py
 ```
 
 The `handout/` directory contains the facilities provided for you to accomplish the assignment, they will most likely be provided as python functions so that you could import it to your source code by adding the `..` to your python path (see [here](assignment-1/example/source.py) for example).
