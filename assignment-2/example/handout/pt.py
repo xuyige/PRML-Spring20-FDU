@@ -81,7 +81,7 @@ def evaluate(model):
 
 def pt_main():
     model = myPTRNNModel()
-    optimizer = torch.optim.Adam(0.001, model.parameters())
+    optimizer = torch.optim.Adam(params=model.parameters(), lr=0.001)
     train(3000, model, optimizer)
     evaluate(model)
 
