@@ -36,7 +36,7 @@ class myAdvPTRNNModel(nn.Module):
 
 def compute_loss(logits, labels):
     losses = nn.CrossEntropyLoss()
-    return losses(logits, labels)
+    return losses(logits.view(-1, 10), labels.view(-1))
 
 
 def train_one_step(model, optimizer, x, y, label):
@@ -69,12 +69,12 @@ def evaluate(model):
     datas = gen_data_batch(batch_size=2000, start=555555555, end=999999999)
     Nums1, Nums2, results = prepare_batch(*datas, maxlen=11)
     with torch.no_grad():
-        logits = model(Nums1, Nums2)
+        logits = model(torch.tensor(Nums1), torch.tensor(Nums2))
     logits = logits.numpy()
     pred = np.argmax(logits, axis=-1)
     res = results_converter(pred)
-    for o in list(zip(datas[2], res))[:20]:
-        print(o[0], o[1], o[0]==o[1])
+    # for o in list(zip(datas[2], res))[:20]:
+    #     print(o[0], o[1], o[0]==o[1])
 
     print('accuracy is: %g' % np.mean([o[0]==o[1] for o in zip(datas[2], res)]))
 
