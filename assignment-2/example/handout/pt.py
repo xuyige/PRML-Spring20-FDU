@@ -1,4 +1,3 @@
-
 import numpy as np
 import torch
 import torch.nn as nn
@@ -76,7 +75,8 @@ def evaluate(model):
     # for o in list(zip(datas[2], res))[:20]:
     #     print(o[0], o[1], o[0]==o[1])
 
-    print('accuracy is: %g' % np.mean([o[0]==o[1] for o in zip(datas[2], res)]))
+    print('accuracy is: %g' %
+          np.mean([o[0] == o[1] for o in zip(datas[2], res)]))
 
 
 def pt_main():
