@@ -6,7 +6,7 @@
 
 #### Note
 
-- This is the first assignment for this course, you should read the [guidelines](https://github.com/xuyige/PRML-Spring20-FDU/blob/master/README.md) and consent to the agreement before doing it.
+- This is the second assignment for this course, you should read the [guidelines](https://github.com/xuyige/PRML-Spring20-FDU/blob/master/README.md) and consent to the agreement before doing it.
 
 - The deadline of this assignment is **<span style="color: red">May 6, 2020</span>** (for 3 weeks), before the course start.
 
