@@ -19,7 +19,7 @@ class myPTRNNModel(nn.Module):
         embed2 = self.embed_layer(num2)
         input = torch.cat((embed1, embed2), 2)
         h0 = torch.randn(2, input.shape[1], 64)
-        output = self.rnn(input, h0)[0]
+        output, hn = self.rnn(input, h0)
         logits = self.dense(output)
         return logits
 
